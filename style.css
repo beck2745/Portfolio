@@ -357,6 +357,16 @@ a:hover{ text-decoration: underline; }
   background: rgba(107,92,255,0.10);
 }
 
+.project-video{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  margin: 16px 0;
+  background: rgba(107,92,255,0.10);
+}
+
 .project-meta{
   display:grid;
   grid-template-columns: repeat(3, 1fr);

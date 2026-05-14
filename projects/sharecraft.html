@@ -37,19 +37,19 @@
       <section class="section">
         <h1>Café POS System</h1>
 
-        <div class="image-scroll">
-          <img src="../images/login.png" alt="Login Page">
-          <img src="../images/skills.png" alt="Tutor Skills Selection">
-          <img src="../images/searching.png" alt="Searching for Tutors">
-          <img src="../images/TutorSchedule.png" alt="Tutor Schedule Page">
-          <img src="../images/BookingConfirmed.png" alt="Booking Confirmed">
-          <img src="../images/Messaging.png" alt="Messaging between Student and Tutor">
-          <img src="../images/Ratingtutor.png" alt="Rating a Tutor">
-          <img src="../images/TutorProfileAfterRating.png" alt="Tutor Profile After Rating">
-          <img src="../images/AdminDashboard.png" alt="Admin Dashboard">
-          <img src="../images/ReportedContent.png" alt="Reported Content">
-          <img src="../images/BlockedContent.png" alt="Blocked Content">
+        <div class="carousel">
+          <button class="carousel-btn left" onclick="changeSlide(-1)" aria-label="Previous image">
+            &#10094;
+          </button>
+
+          <img id="carouselImage" src="../images/login.png" alt="Login Page">
+
+          <button class="carousel-btn right" onclick="changeSlide(1)" aria-label="Next image">
+            &#10095;
+          </button>
         </div>
+
+        <p id="carouselCaption" class="carousel-caption">Login Page</p>
 
         <p>This project develops ShareCraft, a skill-sharing platform in the domain of online education and peer-to-peer learning. Users act as both students and tutors. They register and authenticate, create and manage bookings for tutoring sessions, exchange messages linked to bookings, search for tutors via profiles, skills, and reviews, and use admin capabilities for reports, moderation, and blocked content.</p>
 
@@ -93,6 +93,76 @@
       </footer>
     </div>
   </div>
+
+  <script>
+    const carouselImages = [
+      {
+        src: "../images/login.png",
+        alt: "Login Page"
+      },
+      {
+        src: "../images/skills.png",
+        alt: "Tutor Skills Selection"
+      },
+      {
+        src: "../images/searching.png",
+        alt: "Searching for Tutors"
+      },
+      {
+        src: "../images/TutorSchedule.png",
+        alt: "Tutor Schedule Page"
+      },
+      {
+        src: "../images/BookingConfirmed.png",
+        alt: "Booking Confirmed"
+      },
+      {
+        src: "../images/Messaging.png",
+        alt: "Messaging between Student and Tutor"
+      },
+      {
+        src: "../images/Ratingtutor.png",
+        alt: "Rating a Tutor"
+      },
+      {
+        src: "../images/TutorProfileAfterRating.png",
+        alt: "Tutor Profile After Rating"
+      },
+      {
+        src: "../images/AdminDashboard.png",
+        alt: "Admin Dashboard"
+      },
+      {
+        src: "../images/ReportedContent.png",
+        alt: "Reported Content"
+      },
+      {
+        src: "../images/BlockedContent.png",
+        alt: "Blocked Content"
+      }
+    ];
+
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+
+      if (currentSlide < 0) {
+        currentSlide = carouselImages.length - 1;
+      }
+
+      if (currentSlide >= carouselImages.length) {
+        currentSlide = 0;
+      }
+
+      const image = document.getElementById("carouselImage");
+      const caption = document.getElementById("carouselCaption");
+
+      image.src = carouselImages[currentSlide].src;
+      image.alt = carouselImages[currentSlide].alt;
+      caption.textContent = carouselImages[currentSlide].alt;
+    }
+  </script>
 
   <script src="../script.js"></script>
 </body>

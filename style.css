@@ -357,6 +357,27 @@ a:hover{ text-decoration: underline; }
   background: rgba(107,92,255,0.10);
 }
 
+.image-scroll{
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 16px 0;
+  margin: 16px 0;
+}
+
+.image-scroll img{
+  width: 85%;
+  max-width: 850px;
+  height: 460px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(107,92,255,0.10);
+  scroll-snap-align: start;
+}
+
 .project-video{
   width: 100%;
   height: auto;
@@ -423,5 +444,10 @@ footer{
 
   .navlinks{
     display:none;
+  }
+
+  .image-scroll img{
+    width: 92%;
+    height: 280px;
   }
 }

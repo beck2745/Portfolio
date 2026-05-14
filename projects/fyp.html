@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Final Year Project | Rebecca Meade</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
@@ -11,39 +12,54 @@
   <div class="wrap">
     <div class="card">
       <div class="nav">
-        <div class="brand">
+        <a class="brand" href="../index.html">
           <span class="brand-dot" aria-hidden="true"></span>
           <span>Rebecca Meade</span>
-        </div>
+        </a>
 
         <nav class="navlinks" aria-label="Primary">
           <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#skills">Skills</a>
           <a href="../index.html#projects">Portfolio</a>
           <a href="../index.html#contact">Contact</a>
         </nav>
+
+        <div class="actions">
+          <button class="iconbtn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 13.2A7.5 7.5 0 0 1 10.8 3a9 9 0 1 0 10.2 10.2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <section class="section">
         <h1>Final Year Project</h1>
 
-        <img 
-          src="../images/fyp.png" 
-          alt="Screenshot of Final Year Project game"
-          style="width:100%; border-radius:18px; margin:16px 0;"
-        />
+        <video class="project-hero-image" controls>
+          <source src="../videos/Balance.mp4" type="video/mp4">
+        </video>
 
-        <p>
-          This project is a Unity-based choice-driven game exploring mental health themes
-          through player agency, narrative design, and environmental storytelling.
-          The player repeatedly chooses between sleeping, working, and socialising, with
-          the world changing depending on those choices.
-        </p>
+        <p>This project is a Unity-based choice-driven game exploring mental health themes through player agency, narrative design, and environmental storytelling.</p>
 
-        <div class="tags" style="margin-top:16px;">
-          <span class="tag">Unity</span>
-          <span class="tag">C#</span>
-          <span class="tag">Narrative Design</span>
-          <span class="tag">Environmental Storytelling</span>
+        <p>The player takes on the role of a game developer trying to manage their daily life by repeatedly choosing between sleeping, working, and socialising. Over time, these choices affect the character’s wellbeing and cause the game world to change around them.</p>
+
+        <div class="project-meta">
+          <div class="meta-card">
+            <h3>Role</h3>
+            <p>Designer and developer</p>
+          </div>
+
+          <div class="meta-card">
+            <h3>Tools</h3>
+            <p>Unity, C#, Rider, Blender</p>
+          </div>
+
+          <div class="meta-card">
+            <h3>Focus</h3>
+            <p>Mental health representation, player choice, and environmental feedback</p>
+          </div>
         </div>
 
         <div class="ctaRow">
@@ -56,6 +72,13 @@
           </a>
         </div>
       </section>
+
+      <footer>
+        <span>© 2026 Rebecca Meade</span>
+        <span>
+          <a href="../index.html#top">Back to home ↑</a>
+        </span>
+      </footer>
     </div>
   </div>
 
